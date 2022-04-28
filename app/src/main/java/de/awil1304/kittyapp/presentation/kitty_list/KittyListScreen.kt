@@ -63,8 +63,6 @@ fun KittyListScreen(
                         items(state.kittyList) { kitty ->
                             KittyListItem(
                                 kitty = kitty,
-                                onClick = {
-                                }
                             )
                         }
                     }
@@ -84,8 +82,7 @@ fun KittyListScreen(
                         items(state.kittyList) { kitty ->
                             KittyListItem(
                                 kitty = kitty,
-                                onClick = {
-                                }
+
                             )
                         }
                     }
@@ -105,8 +102,7 @@ fun KittyListScreen(
                         items(state.kittyList) { kitty ->
                             KittyListItem(
                                 kitty = kitty,
-                                onClick = { //TODO
-                                }
+
                             )
                         }
                     }
