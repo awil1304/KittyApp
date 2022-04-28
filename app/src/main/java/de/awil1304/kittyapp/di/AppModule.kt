@@ -12,6 +12,8 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
+// di to avoid hard coding implementations, so they can be replaced and easily tested
+
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {

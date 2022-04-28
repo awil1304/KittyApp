@@ -7,11 +7,12 @@ import de.awil1304.kittyapp.domain.repository.KittyRepository
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-//unnecessary here, but clean and scalable
+// boilerplate code here, but clean and scalable
 class KittyRepositoryImpl @Inject constructor(
     private val api: KittyApi
 ) : KittyRepository {
 
+    // actual request from real api
     override suspend fun getKitties(): List<KittyDto> {
         return api.getKitties()
     }

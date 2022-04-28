@@ -32,11 +32,13 @@ import de.awil1304.kittyapp.domain.model.Kitty
 
 @Composable
 fun KittyListItem(
+    // needs kitty object to load into item
     kitty: Kitty,
-    modifier: Modifier = Modifier,
-    onClick: (Kitty) -> Unit,
+    // get kitty.id from kitty object in card, so i can indexOf(kitty.id) and then remove and add it at pos0?
+    onClick: () -> Unit,
 
     ) {
+
     // box for placement in activity
     Box(
         modifier = Modifier
@@ -44,22 +46,26 @@ fun KittyListItem(
             .fillMaxWidth()
             .padding(start = 16.dp, end = 16.dp, top = 8.dp, bottom = 8.dp)
     ) {
+
         // actual card item
         Card(
-            modifier = modifier
-                .fillMaxWidth(),
+            modifier = Modifier
+                .fillMaxWidth(), //fixed width so every image is has width as base for scaling height
             shape = RoundedCornerShape(15.dp),
             elevation = 5.dp
 
         ) {
-            //Box for Picture and Image
+
+            // box for image, title and order button
             Box(
                 modifier = Modifier
                     .background(colorResource(id = R.color.light_pink))
-                    .wrapContentHeight()
+                    .wrapContentHeight() // height adjusted according to image fixed width of parent box
                     .padding(16.dp),
                 contentAlignment = Alignment.Center
             ) {
+
+                // column to arrange image above title
                 Column {
                     AsyncImage(
                         modifier = Modifier
@@ -77,6 +83,7 @@ fun KittyListItem(
 
                     Spacer(modifier = Modifier.height(8.dp))
 
+                    // row to arrange title and order button next to each other
                     Row(
                         modifier = Modifier
                             .fillMaxWidth(),
@@ -84,6 +91,8 @@ fun KittyListItem(
                         verticalAlignment = Alignment.CenterVertically
                     )
                     {
+
+                        // title text box
                         Text(
                             textAlign = TextAlign.Center,
                             text = kitty.title,
@@ -93,6 +102,8 @@ fun KittyListItem(
                                 fontWeight = FontWeight.Bold
                             ),
                         )
+
+                        // button to push card to top of list and thus screen
                         IconButton(
                             onClick = { onClick }) {
                             Icon(

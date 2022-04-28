@@ -6,6 +6,8 @@ import kotlinx.coroutines.flow.Flow
 
 interface KittyRepository {
 
+    // function for api request
+    // interface for testing later
     suspend fun getKitties(): List<KittyDto>
 
 }

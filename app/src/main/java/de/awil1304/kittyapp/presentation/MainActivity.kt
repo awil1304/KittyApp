@@ -27,10 +27,14 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     val navController = rememberNavController()
+
+                    // app navigation
                     NavHost(
                         navController = navController,
                         startDestination = Screen.KittyListScreen.route
                     ) {
+
+                        // composable block for each different screen
                         composable(
                             route = Screen.KittyListScreen.route
                         ) {

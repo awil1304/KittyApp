@@ -6,6 +6,7 @@ import retrofit2.http.GET
 //Api request
 interface KittyApi {
 
+    // gets all kitty object dtos
     @GET("https://thaliabooks.herokuapp.com/cats")
     suspend fun getKitties(): List<KittyDto>
 
