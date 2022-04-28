@@ -4,20 +4,14 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
-import androidx.lifecycle.ViewModel
 import androidx.navigation.NavController
-import de.awil1304.kittyapp.data.remote.KittyApi
-import de.awil1304.kittyapp.data.repository.KittyRepositoryImpl
-import de.awil1304.kittyapp.presentation.KittyListViewModel
-import de.awil1304.kittyapp.presentation.Screen
-import kotlinx.coroutines.launch
+import de.awil1304.kittyapp.util.Screen
 
 
 @Composable
