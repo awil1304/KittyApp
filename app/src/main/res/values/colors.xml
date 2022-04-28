@@ -8,5 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="error_red">#FFC67676</color>
-
+    <color name="light_pink">#E691C4</color>
+    <color name="dark_pink">#DF59A9</color>
 </resources>

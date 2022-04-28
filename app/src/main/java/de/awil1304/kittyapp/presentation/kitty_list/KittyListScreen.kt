@@ -12,14 +12,16 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import de.awil1304.kittyapp.R
 import de.awil1304.kittyapp.presentation.KittyListViewModel
 import de.awil1304.kittyapp.presentation.kitty_list.components.ErrorSnackbar
-import de.awil1304.kittyapp.presentation.kitty_list.components.KittyListItemCompact
-import de.awil1304.kittyapp.presentation.kitty_list.components.KittyListItemElse
+import de.awil1304.kittyapp.presentation.kitty_list.components.KittyListItem
+
 import de.awil1304.kittyapp.util.WindowInfo
 import de.awil1304.kittyapp.util.rememberWindowInfo
 
@@ -36,7 +38,7 @@ fun KittyListScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.DarkGray)
+            .background(Color.LightGray)
     ) {
         if (state.error.isNotBlank()) {
             val snackbarHostState = remember { SnackbarHostState() }
@@ -61,20 +63,20 @@ fun KittyListScreen(
             Text(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(Color.Gray),
+                    .background(colorResource(id = R.color.dark_pink)),
                 text = "Kitties",
                 style = MaterialTheme.typography.h4,
                 textAlign = TextAlign.Center,
-                color = Color.White,
+                color = Color.White ,
             )
 
             when (windowInfo.screenWidthInfo) {
                 is WindowInfo.WindowType.Compact -> {
                     LazyColumn(modifier = Modifier.fillMaxSize()) {
                         items(state.kittyList) { kitty ->
-                            KittyListItemCompact(
+                            KittyListItem(
                                 kitty = kitty,
-                                onItemClick = {
+                                onClick = {
                                 }
                             )
                         }
@@ -91,9 +93,9 @@ fun KittyListScreen(
                         modifier = Modifier.fillMaxHeight()
                     ) {
                         items(state.kittyList) { kitty ->
-                            KittyListItemElse(
+                            KittyListItem(
                                 kitty = kitty,
-                                onItemClick = {
+                                onClick = {
                                 }
                             )
                         }
@@ -110,9 +112,9 @@ fun KittyListScreen(
                         modifier = Modifier.fillMaxHeight()
                     ) {
                         items(state.kittyList) { kitty ->
-                            KittyListItemElse(
+                            KittyListItem(
                                 kitty = kitty,
-                                onItemClick = {
+                                onClick = {
                                 }
                             )
                         }

@@ -1,5 +1,6 @@
 package de.awil1304.kittyapp.data.remote.dto
 
+import androidx.compose.ui.text.capitalize
 import de.awil1304.kittyapp.domain.model.Kitty
 
 data class KittyDto(
@@ -12,6 +13,6 @@ fun KittyDto.toKitty(): Kitty {
     return Kitty(
         id = id,
         imageUrl = imageUrl.replace("http://", "https://"),
-        title = title
+        title = title.replaceFirstChar { it.uppercase() }
     )
 }
