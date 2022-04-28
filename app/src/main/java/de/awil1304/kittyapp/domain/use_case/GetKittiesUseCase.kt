@@ -16,12 +16,14 @@ class GetKittiesUseCase @Inject constructor(
     operator fun invoke(): Flow<Resource<List<Kitty>>> = flow {
         try {
             emit(Resource.Loading<List<Kitty>>())
-            val kitties = repository.getKitties().map { it.toKitty() }
+            val kitties = repository.getKitties().map {it.toKitty() }
             emit(Resource.Success<List<Kitty>>(kitties))
         } catch (e: HttpException) {
             emit (Resource.Error<List<Kitty>>(e.localizedMessage ?: "An unexpected error occurred."))
         } catch (e: IOException) {
             emit (Resource.Error<List<Kitty>>(e.localizedMessage ?: "Couldn't reach server. Check your internet connection."))
         }
+
     }
+
 }
