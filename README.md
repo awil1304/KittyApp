@@ -27,10 +27,12 @@ Optional / Bonus:
 
 
 Struggles:
+
 Aside from the distraction due to a personal tragedy this week which cost me quite some time and unfortunately focus as well,
 I struggled with the following tasks:
 
 2.5 If a card is clicked, it moves to the first position
+
       Among other things, I learned the basics of Dagger-Hilt for this project.
       Since with Dagger-Hilt I have never had to initialize the actual list of objects from the API, I had trouble getting the index
       on click and thus removing and adding it at list[0]. Having read that initializing the list manually is bad practice, because of the implications
@@ -42,6 +44,7 @@ I struggled with the following tasks:
       Follow-up problem from 2.5
       
 1.4 The most important parts of the business logic (ViewModels, Repositories, Use-Cases...) are unit-tested
+
      I have not learned unit testing yet. Due to the lack of time mentioned above, I couldn't get into it until now.
      Trying to test the KittyRepository, I thought for testing I could initialize the list manually, however, I encountered a problem
      with implementing the interface.
@@ -52,4 +55,5 @@ due to the tragedy mentioned above.
 I am looking forward to hearing from you soon.
 
 Cheers,
+
 Andreas
