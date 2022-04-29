@@ -32,7 +32,7 @@ I struggled with the following tasks:
 
 2.5 If a card is clicked, it moves to the first position
 
-      Among other things, I learned the basics of Dagger-Hilt for this project.
+      Among other things like GitHub, I learned the basics of Dagger-Hilt for this project.
       Since with Dagger-Hilt I have never had to initialize the actual list of objects from the API, I had trouble getting the index
       on click and thus removing and adding it at list[0]. Having read that initializing the list manually is bad practice, because of the implications
       it would have for testing, I refrained from doing so.
