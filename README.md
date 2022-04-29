@@ -41,6 +41,7 @@ I struggled with the following tasks:
       however, I ran out of time to try. With the right implementation, this would have reduced the number of API calls upon opening the app as well.
       
 2.6 The new arrangement from 2.5 persists after an orientation change
+
       Follow-up problem from 2.5
       
 1.4 The most important parts of the business logic (ViewModels, Repositories, Use-Cases...) are unit-tested
