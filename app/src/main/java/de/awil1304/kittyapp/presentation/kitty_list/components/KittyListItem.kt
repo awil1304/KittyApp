@@ -30,7 +30,9 @@ import coil.request.ImageRequest
 import de.awil1304.kittyapp.R
 import de.awil1304.kittyapp.domain.model.Kitty
 
-
+/**
+ * single composable into which a kitty object gets loaded
+ */
 @Composable
 fun KittyListItem(
     // needs kitty object to load into item

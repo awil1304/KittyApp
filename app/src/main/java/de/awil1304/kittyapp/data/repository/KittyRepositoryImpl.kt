@@ -12,7 +12,9 @@ class KittyRepositoryImpl @Inject constructor(
     private val api: KittyApi
 ) : KittyRepository {
 
-    // actual request from real api
+    /**
+     * actual api request
+     */
     override suspend fun getKitties(): List<KittyDto> {
         return api.getKitties()
     }

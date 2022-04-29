@@ -13,6 +13,9 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
 
+/**
+ * viewmodel for kittylistscreen
+ */
 @HiltViewModel
 class KittyListViewModel @Inject constructor(
     private val getKittiesUseCase: GetKittiesUseCase,

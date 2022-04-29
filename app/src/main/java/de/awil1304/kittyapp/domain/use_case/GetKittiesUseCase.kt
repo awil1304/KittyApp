@@ -10,7 +10,10 @@ import retrofit2.HttpException
 import java.io.IOException
 import javax.inject.Inject
 
-// use case to get coins from api (should probably be in data layer?)
+/**
+ * use case to get kitties from api
+ * (should probably be in data layer?)
+ */
 class GetKittiesUseCase @Inject constructor(
 
     // inject interface, not impl so it's easily replace

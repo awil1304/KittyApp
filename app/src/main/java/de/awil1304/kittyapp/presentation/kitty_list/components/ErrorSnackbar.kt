@@ -13,7 +13,9 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.navigation.NavController
 import de.awil1304.kittyapp.util.Screen
 
-
+/**
+ * snackbar in case api request fails
+ */
 @Composable
 fun ErrorSnackbar(
     navController: NavController,

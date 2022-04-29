@@ -14,15 +14,22 @@ import javax.inject.Singleton
 
 // di to avoid hard coding implementations, so they can be replaced and easily tested
 
+/**
+ * dagger hilt setup
+ */
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
 
+    /**
+     * api call singleton with retrofit
+     */
     @Provides
     @Singleton
     fun provideKittyApi(): KittyApi {
         return Retrofit.Builder()
             .baseUrl(Constants.BASE_URL)
+                // to serialize and deserialize json data
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(KittyApi::class.java)

@@ -22,6 +22,9 @@ import de.awil1304.kittyapp.presentation.kitty_list.components.KittyListItem
 import de.awil1304.kittyapp.util.WindowInfo
 import de.awil1304.kittyapp.util.rememberWindowInfo
 
+/**
+ * composed kittylist activity
+ */
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun KittyListScreen(
