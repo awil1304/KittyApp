@@ -12,7 +12,6 @@ Successfully implemented challenge points:
   1.1 Kotlin 
   1.2 minSdkVersion 22 
   1.3 MVVM architecture 
-  
 2. Features
   2.1 The images are arranged vertically with the corresponding text in "cards" 2.2 The images each have a loading and an error placeholder
   2.3 A ProgressBar is shown while the JSON data is being loaded
